@@ -1,20 +1,20 @@
 <?php
 
-namespace App\Http;
+namespace App;
 
-use App\Http\Middleware\Authenticate;
-use App\Http\Middleware\EncryptCookies;
-use App\Http\Middleware\EnsureEmailIsVerified;
-use App\Http\Middleware\PreventRequestsDuringMaintenance;
-use App\Http\Middleware\RedirectIfAuthenticated;
-use App\Http\Middleware\TrimStrings;
-use App\Http\Middleware\TrustProxies;
-use App\Http\Middleware\VerifyCsrfToken;
+use Support\Middleware\Authenticate;
+use Support\Middleware\EncryptCookies;
+use Support\Middleware\EnsureEmailIsVerified;
+use Support\Middleware\PreventRequestsDuringMaintenance;
+use Support\Middleware\RedirectIfAuthenticated;
+use Support\Middleware\TrimStrings;
+use Support\Middleware\TrustProxies;
+use Support\Middleware\VerifyCsrfToken;
 use Illuminate\Auth\Middleware\AuthenticateWithBasicAuth;
 use Illuminate\Auth\Middleware\Authorize;
 use Illuminate\Auth\Middleware\RequirePassword;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
-use Illuminate\Foundation\Http\Kernel as HttpKernel;
+use Illuminate\Foundation\Http\Kernel;
 use Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull;
 use Illuminate\Foundation\Http\Middleware\ValidatePostSize;
 use Illuminate\Http\Middleware\HandleCors;
@@ -27,7 +27,7 @@ use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful;
 
-class Kernel extends HttpKernel
+class HttpKernel extends Kernel
 {
     /**
      * The application's global HTTP middleware stack.

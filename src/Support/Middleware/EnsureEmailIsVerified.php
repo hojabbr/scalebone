@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace Support\Middleware;
 
 use Closure;
 use Illuminate\Contracts\Auth\MustVerifyEmail;

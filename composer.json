@@ -28,10 +28,15 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app/",
+            "App\\": "src/App",
+            "Domain\\": "src/Domain",
+            "Support\\": "src/Support",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
-        }
+        },
+        "files" : [
+            "src/Support/helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {

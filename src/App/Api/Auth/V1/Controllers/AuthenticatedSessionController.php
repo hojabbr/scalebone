@@ -2,8 +2,8 @@
 
 namespace App\Api\Auth\V1\Controllers;
 
-use App\Controller;
 use App\Api\Auth\V1\Requests\LoginRequest;
+use App\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;

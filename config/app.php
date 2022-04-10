@@ -1,6 +1,5 @@
 <?php
 
-use App\Api\Auth\V1\Providers\AuthAppServiceProvider;
 use App\Providers\AppServiceProvider;
 use Illuminate\Support\Facades\Facade;
 

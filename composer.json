@@ -34,10 +34,7 @@
       "App\\": "src/App",
       "Domain\\": "src/Domain",
       "Support\\": "src/Support"
-    },
-    "files": [
-      "src/Support/helpers.php"
-    ]
+    }
   },
   "autoload-dev": {
     "psr-4": {

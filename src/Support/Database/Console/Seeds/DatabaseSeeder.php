@@ -1,11 +1,11 @@
 <?php
 
-namespace Domain\Auth\database\seeders;
+namespace Support\Database\Console\Seeds;
 
-use Domain\Auth\Models\User;
+use Domain\Auth\database\seeders\UsersSeeder;
 use Illuminate\Database\Seeder;
 
-class UsersSeeder extends Seeder
+class DatabaseSeeder extends Seeder
 {
     /**
      * Seed the application's database.
@@ -14,6 +14,6 @@ class UsersSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory(10)->create();
+        $this->call(UsersSeeder::class);
     }
 }

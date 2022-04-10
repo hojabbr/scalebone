@@ -18,7 +18,7 @@ class EnsureEmailIsVerified
      * @param string|null $redirectToRoute
      * @return JsonResponse|RedirectResponse|null
      */
-    public function handle($request, Closure $next, $redirectToRoute = null)
+    public function handle($request, Closure $next, $redirectToRoute = null): JsonResponse|RedirectResponse|null
     {
         if (! $request->user() ||
             ($request->user() instanceof MustVerifyEmail &&

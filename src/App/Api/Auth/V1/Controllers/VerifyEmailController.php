@@ -16,7 +16,7 @@ class VerifyEmailController extends Controller
      * @param EmailVerificationRequest $request
      * @return RedirectResponse
      */
-    public function __invoke(EmailVerificationRequest $request)
+    public function __invoke(EmailVerificationRequest $request): RedirectResponse
     {
         if ($request->user()->hasVerifiedEmail()) {
             return redirect()->intended(

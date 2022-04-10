@@ -7,12 +7,12 @@ use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
-    public function register()
+    public function register(): void
     {
         $this->app->register(AuthAppServiceProvider::class);
     }
 
-    public function boot()
+    public function boot(): void
     {
         //
     }

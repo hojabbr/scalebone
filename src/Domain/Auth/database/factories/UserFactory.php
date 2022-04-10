@@ -2,14 +2,18 @@
 
 namespace Domain\Auth\database\factories;
 
+use Domain\Auth\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
+use function now;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\Domain\Auth\Models\User>
+ * @extends Factory<\Domain\Auth\Models\User>
  */
 class UserFactory extends Factory
 {
+    protected $model = User::class;
+
     /**
      * Define the model's default state.
      *

@@ -20,7 +20,7 @@ class VerifyEmailController extends Controller
     {
         if ($request->user()->hasVerifiedEmail()) {
             return redirect()->intended(
-                config('app.frontend_url').RouteServiceProvider::HOME.'?verified=1'
+                config('app.frontend_url') . RouteServiceProvider::HOME . '?verified=1'
             );
         }
 
@@ -29,7 +29,7 @@ class VerifyEmailController extends Controller
         }
 
         return redirect()->intended(
-            config('app.frontend_url').RouteServiceProvider::HOME.'?verified=1'
+            config('app.frontend_url') . RouteServiceProvider::HOME . '?verified=1'
         );
     }
 }

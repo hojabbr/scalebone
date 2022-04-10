@@ -2,14 +2,6 @@
 
 namespace App;
 
-use Support\Middleware\Authenticate;
-use Support\Middleware\EncryptCookies;
-use Support\Middleware\EnsureEmailIsVerified;
-use Support\Middleware\PreventRequestsDuringMaintenance;
-use Support\Middleware\RedirectIfAuthenticated;
-use Support\Middleware\TrimStrings;
-use Support\Middleware\TrustProxies;
-use Support\Middleware\VerifyCsrfToken;
 use Illuminate\Auth\Middleware\AuthenticateWithBasicAuth;
 use Illuminate\Auth\Middleware\Authorize;
 use Illuminate\Auth\Middleware\RequirePassword;
@@ -26,6 +18,14 @@ use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful;
+use Support\Middleware\Authenticate;
+use Support\Middleware\EncryptCookies;
+use Support\Middleware\EnsureEmailIsVerified;
+use Support\Middleware\PreventRequestsDuringMaintenance;
+use Support\Middleware\RedirectIfAuthenticated;
+use Support\Middleware\TrimStrings;
+use Support\Middleware\TrustProxies;
+use Support\Middleware\VerifyCsrfToken;
 
 class HttpKernel extends Kernel
 {

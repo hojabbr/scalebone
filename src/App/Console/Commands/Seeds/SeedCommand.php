@@ -4,7 +4,7 @@ namespace App\Console\Commands\Seeds;
 
 use Illuminate\Database\Console\Seeds\SeedCommand as BaseSeedCommand;
 use Illuminate\Database\Seeder;
-use Support\Database\Console\Seeds\DatabaseSeeder;
+use Support\Database\Seeders\DatabaseSeeder;
 use Symfony\Component\Console\Input\InputOption;
 
 class SeedCommand extends BaseSeedCommand
@@ -23,7 +23,7 @@ class SeedCommand extends BaseSeedCommand
             $class = 'Support\\Database\\' . $class;
         }
 
-        if ($class === 'Support\\Database\\Console\\Seeds\\DatabaseSeeder' &&
+        if ($class === 'Support\\Database\\Seeders\\DatabaseSeeder' &&
             ! class_exists($class)) {
             $class = 'DatabaseSeeder';
         }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Support\Database\Console\Seeds;
+namespace Support\Database\Seeders;
 
 use Domain\Auth\database\seeders\UsersSeeder;
 use Illuminate\Database\Seeder;

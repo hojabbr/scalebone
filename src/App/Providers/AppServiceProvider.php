@@ -2,25 +2,16 @@
 
 namespace App\Providers;
 
+use App\Api\Auth\V1\Providers\AuthAppServiceProvider;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
     public function register()
     {
-        //
+        $this->app->register(AuthAppServiceProvider::class);
     }
 
-    /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
     public function boot()
     {
         //

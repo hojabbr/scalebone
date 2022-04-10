@@ -1,6 +1,7 @@
 <?php
 
 use App\Api\Auth\V1\Providers\AuthAppServiceProvider;
+use App\Providers\AppServiceProvider;
 use Illuminate\Support\Facades\Facade;
 
 return [
@@ -179,7 +180,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        AuthAppServiceProvider::class,
+        AppServiceProvider::class
 
     ],
 

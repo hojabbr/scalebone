@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace App\Api\Auth\V1\Providers;
 
-use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+use App\Providers\RouteServiceProvider;
 
-class AuthMigrationServiceProvider extends ServiceProvider
+class AuthMigrationServiceProvider extends RouteServiceProvider
 {
     public function register(): void
     {
-        $this->loadMigrationsFrom(app_path('Domain/Auth/database/migrations'));
+        $this->loadMigrationsFrom(base_path('src/Domain/Auth/database/migrations'));
     }
 }

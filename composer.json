@@ -33,9 +33,7 @@
     "psr-4": {
       "App\\": "src/App",
       "Domain\\": "src/Domain",
-      "Support\\": "src/Support",
-      "Database\\Factories\\": "database/factories/",
-      "Database\\Seeders\\": "database/seeders/"
+      "Support\\": "src/Support"
     },
     "files": [
       "src/Support/helpers.php"

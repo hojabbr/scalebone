@@ -2,7 +2,7 @@
 
 namespace Tests\Feature\Auth;
 
-use App\Models\User;
+use Domain\Auth\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -14,7 +14,7 @@ class AuthenticationTest extends TestCase
     {
         $user = User::factory()->create();
 
-        $response = $this->post('/login', [
+        $response = $this->post('api/auth/v1/login', [
             'email' => $user->email,
             'password' => 'password',
         ]);
@@ -27,7 +27,7 @@ class AuthenticationTest extends TestCase
     {
         $user = User::factory()->create();
 
-        $this->post('/login', [
+        $this->post('api/auth/v1/login', [
             'email' => $user->email,
             'password' => 'wrong-password',
         ]);

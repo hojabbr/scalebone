@@ -44,6 +44,8 @@ class HttpKernel extends Kernel
         ValidatePostSize::class,
         TrimStrings::class,
         ConvertEmptyStringsToNull::class,
+        StartSession::class,
+        ShareErrorsFromSession::class,
     ];
 
     /**
